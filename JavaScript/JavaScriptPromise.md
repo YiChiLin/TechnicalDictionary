@@ -1,3 +1,6 @@
+---
+title: JavaScript Promise
+---
 # Promise
 ## Understand promises before you start using async/await
 - async/await is promise. They are the same thing basically.
