@@ -1,3 +1,6 @@
+---
+title: JavaScript Promise
+---
 # Promise
 ## Understand promises before you start using async/await
 - async/await is promise. They are the same thing basically.
@@ -15,7 +18,6 @@ function getFirstUser() {
 }
 ```
 - To Catch Error
-
 ```js
 function getFirstUser() {
     return getUsers().then(function(users) {
@@ -54,7 +56,8 @@ async function getFirstUser() {
 }
 ```
 ### Pitfall in async/await
-1、 Not Awaiting : If I don't await. You will get a promise instead of a value when you are using it.
+1、 Not Awaiting 
+- If I don't await. You will get a promise instead of a value when you are using it.
 ```js
 async function getFirstUser() {
     let users = getUsers(); //without await
