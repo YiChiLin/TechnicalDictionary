@@ -1,0 +1,38 @@
+# Linux Command
+- case senetive
+- whoami
+- shutdown -r now / reboot(Restart)
+- pwd (Current position)
+- / (代表根目錄)
+- ll -ah [path] (list all files)
+- cat (順向顯示檔案內容)
+- tac (cat 相反)
+- tar (解壓縮/壓縮)
+- tar xzvf 
+- tar czvf
+- ping
+- ctrl + c (中斷)
+- df (目前硬碟使用量)
+- df -HT(較好閱讀)
+- wc (檔案有幾行/字元)
+- wc -l(幾行)
+- wc -c(字元)
+- whereis [file] (找檔案位置)
+- ps (正在run的service)
+- & (在背後執行)
+- -9 (強制砍掉)
+- netstat (有哪些port在上面跑)
+- traceroute (目前走過的路由)
+- cp (copy file)
+- cp [source file] [distanation]
+- rm (remove file)
+- rm -f (不問Y/N直接砍)
+- touch (建檔案)
+- chmod (更改檔案權限) (7 = Read,Write,Execute)
+- chown (更改檔案所有者)
+- chown [username] [file]
+- grep (搜尋)
+- mkdir (Create directory)
+- rmdir (Remove directory if directory doesn't have sub file)
+- rmdir -rf (Remov directory)
+- sudo su (Change to root)
