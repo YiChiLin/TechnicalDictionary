@@ -36,3 +36,19 @@
 - rmdir (Remove directory if directory doesn't have sub file)
 - rmdir -rf (Remov directory)
 - sudo su (Change to root)
+- exit (離開root權限)
+### Edit
+- vi / vim
+- :q! (離開vim)
+- h = left, l = right, k = up, j = down
+- ^ / 0(移動到字首)
+- $ (這一行的字尾)
+- H (這個頁面的最上面)
+- L (這個頁面的最下面)
+- gg (整份文件最上面)
+- G (整份文件最下面)
+- x 剪下
+- d 剪下整行
+- v (選取) y (貼上)
+- ZZ (存檔離開)
+- i (現在位置insert), a (下一行insert)
