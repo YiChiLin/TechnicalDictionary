@@ -67,3 +67,33 @@ title: OO Analysis and Design
     object obj = 10;
     int number = (int)obj;
 ```
+
+## Difference between int.Parse(string) & Convert.ToInt32(string)
+#### When convert fail
+- int.Parse(string) : It will throw exception.
+- Convert.ToInt32(string) : While convertin fail, it will return default value.
+
+## Enumerable.Cast<TResult>()
+- It is an extension method on IEnumerable.
+- In order to convert from base class to sub class.
+- Once convert fail, will throw InvalidCastException at runtime. Using only make sure all items are the same type.
+- Can also be used to convert an IEnumerable to an IEnumerable<T>.
+```csharp
+   // select each Shape, cast it to Rectangle
+   var rectangles = shapes
+                    .Select(s => (Rectangle)s)
+                    .ToList();
+
+    // using Enumerable.Cast<TResult>()
+    var rectangles = shapes
+                    .Cast<Rectangle>()
+                    .ToList();
+```
+
+## Enumerable.OfType<TResult>()
+- It is an extension method on IEnumerable.
+- If collections contains multiple types, can use this. It select only specific type of items.
+```csharp
+   // returns only a sequence of the shapes that are Rectangles
+   var onlyRectangles = shapes.OfType<Rectangle>().ToList();
+```
