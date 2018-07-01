@@ -1,15 +1,28 @@
 # Init simple web with webpack and babel
 
-### Steps
-
-#### Webpack install
+### Webpack install
 
 ```bash
 npm init -y (Created package.json without answer questions)
 npm i webpack webpack-cli --save-dev
 ```
 
-#### Babel install
+- webpack command (setup in package.json script seciton)
+
+  - "start": "webpack --mode development" (run for local dev environment)
+  - "build": "webpack --mode production"
+
+- webpack dev-server
+
+```bash
+    npm i webpack-dev-server --save-dev
+```
+
+- webpack command (setup in package.json script seciton)
+
+  - "start": "webpack-dev-server --mode development" (run for local dev environment)
+
+### Babel install
 
 - It is a transpiler from new js version(ES6) to the most compatible version(ES5)
 
