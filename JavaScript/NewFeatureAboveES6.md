@@ -6,7 +6,7 @@
 
 1.  Array.prototype.includes
 
-* Help to find if an item is in the array.
+- Help to find if an item is in the array.
 
 ```js
 const ARRAY = [1, 3, 5, 7];
@@ -20,6 +20,28 @@ ARRAY.includes(3);
 Math.pow(2, 3);
 // new
 2 ** 3;
+```
+
+3.  Spread Operator (...)
+
+- Give you ability to expand or spread iterable object into multiple elements.
+
+```js
+// Conbine two arrays
+const fruits = ["blue berry", "bannan", "pear"];
+const vegetables = ["carrot", "corn", "potato"];
+
+// Pre-ES6
+const result = fruits.concat(vegetables);
+
+// ES6 with spread Operator
+const newResult = [...fruits, ...vegetables];
+```
+
+```js
+// Expand Array
+const numbers = [1, 3, 5, 7, 9];
+console.log(...numbers); //1,3,5,7,9
 ```
 
 ## ES 2017
