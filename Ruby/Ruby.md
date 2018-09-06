@@ -271,3 +271,19 @@ end
 #It will return an array with ["What","a","beautiful","day!"]
 %w(What a beautiful day!)
 ```
+
+2. **inject**: It is a shortcut function.
+
+```ruby
+# Normal Way
+sum = 0
+[1,35565,787,234,99,10,5].each do |x|
+    sum+=x
+end
+
+# Shortcut
+[1,35565,787,234,99,10,5].inject(&:+)
+[1,35565,787,234,99,10,5].inject(&:*)
+
+# The symbol +, * is a method in Ruby
+```
