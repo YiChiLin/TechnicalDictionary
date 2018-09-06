@@ -214,6 +214,23 @@ lamb = -> (n) { puts 'I am a stuby lambda' }
 
 - Procs return from home (the method where it is created), lambdas return from self.
 
+```ruby
+def my_proc_method
+    x = Proc.new {return}
+    x.call
+    p "Text inside the method"
+end
+# Console result will be nil because of return
+# Return inside Proc will skip the following code
+
+def my_lambda_method
+    x = lambda {return}
+    x.call
+    p "Text inside the method"
+end
+# Will print the text
+```
+
 Note: **&:methodName**
 
 [Reference Source](https://www.brianstorti.com/understanding-ruby-idiom-map-with-symbol/)
