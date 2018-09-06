@@ -173,6 +173,7 @@ end
 
 ### PROCS
 
+- A block of code that you can store in a variable
 - To save you if you want to pass two blocks into a method.
 - Proc objects are blocks of code that have been bound to a set of local variables. Once bound, the code may be called in different contexts and can still access those variables.
 
@@ -236,7 +237,20 @@ Note: **&:methodName**
 [Reference Source](https://www.brianstorti.com/understanding-ruby-idiom-map-with-symbol/)
 
 ````ruby
+# Example 1
 ["emma","adole"].map(&:upcase)
+
+# Example 2
+(1..10).to_a.select do |x|
+    x.even?
+end
+
+# Equals to
+(1..10).to_a.select {|x| x.even?}
+
+# Equals to (This is advance Ruby)
+(1..10).to_a.select(&:even?)
+
 ```
 
 ### Symbo
@@ -248,3 +262,12 @@ Note: **&:methodName**
 
 - **$** this means global. Z.B: $stdin.
 - **@** this means this object. Z.B: @name. It's like object property. Without **@** will be just in function scope variable.
+
+### Shortcut
+
+1. **%w(text)**: It is a shortcut for array which will convert text to array.
+
+```ruby
+#It will return an array with ["What","a","beautiful","day!"]
+%w(What a beautiful day!)
+```
