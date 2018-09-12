@@ -287,3 +287,16 @@ end
 
 # The symbol +, * is a method in Ruby
 ```
+
+3. unless/if condition
+
+```ruby
+players = ["Yukiko","Jean"]
+unless players.empty?
+    players.each {|player| puts player}
+end
+
+# Can be short to this
+# Players array iterate each element and print it out unless players array isn't empty
+players.each {|player| puts player} unless players.empty?
+```
