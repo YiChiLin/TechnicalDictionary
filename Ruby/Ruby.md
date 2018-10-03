@@ -173,14 +173,16 @@ end
 
 ### PROCS
 
-- A block of code that you can store in a variable
-- To save you if you want to pass two blocks into a method.
+- A block of code that you can store in a variable.
+- Why need proc?
+  - Because block is not an object in Ruby, therefore you can't set block to a variable. Here comes proc to solve this problem.
+  - Since you use proc, you don't need to repeat itself.
 - Proc objects are blocks of code that have been bound to a set of local variables. Once bound, the code may be called in different contexts and can still access those variables.
 
 #### Defining procs
 
 - You can use **Proc.new** or **proc** to create a proc.
-- **&** keyword is used to let Ruby knows this is not a vairble but a proc.
+- **&** keyword is used to let Ruby knows this is not a variable but a proc. It will convert proc to a block.
 - There are different ways of calling procs in our methods. Using call, () or using [].
 
 ```ruby
@@ -190,7 +192,7 @@ factor = proc {|n| print n*2}
 # Using the proc value
 [3,2,1].each(&factor)
 # > 642
-
+factor.call
 
 def my_map(enumerable, &block)
   result = []
